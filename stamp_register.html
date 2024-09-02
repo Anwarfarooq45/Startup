@@ -1,0 +1,595 @@
+<html><head>
+
+  <title>New Branch</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="" rel="stylesheet" type="text/css">
+  
+   <link rel="stylesheet" href="post.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="cs1/style.css">
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+  
+  
+  $(document).ready(function(){
+  
+  
+  
+  
+  
+  ///////////////  LIST OF LIFTS WITH CUSTOMERS ///////////////////
+  
+  $("#cusname").change(function(){
+  var papsize =$("#cusname").val();
+  $.ajax({
+  type:"post",
+  url:"getgetcusdetails.php",
+  data: {xpapsize:papsize},
+    dataType: 'json',   
+    success:function(data){
+    
+  
+    
+    $('#addd1').val(data[0]);
+    $('#addd2').val(data[1]);
+    $('#addd3').val(data[2]);
+    $('#mob').val(data[3]);
+  
+    $('#dname').val(data[4]);
+    $('#tname').val(data[5]);
+    $('#citytown').val(data[6]);
+  
+    $('#custype').val(data[7]);
+  
+  
+    $('#RRID').val(data[8]);
+  
+    }
+  
+  });
+  });
+  });
+  ///////////////  LIST OF LIFTS WITH CUSTOMERS   ///////////////////
+  
+  
+  </script>
+  
+  
+  
+  
+  
+  </head>
+  
+  
+  
+  <body style="background:#008B8B;width:100%;" "="">
+  
+  
+  
+    <a style="width:90%;height:50px;text-align:center;  box-shadow: 10px 10px 10px #000000;   background: linear-gradient(#003333, #008B8B); border: 1px solid #008B8B; border-radius: 18px;margin-left:4%;margin-top:5px;font-size:18px;color:yellow;" href="admin.php" class="button">GoBack</a>
+  
+      <br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            
+  
+                <div style="width:90%; height:auto;float:left; background: #ffffff;margin-left:0%;">
+  
+  </div>
+  
+  
+  
+  
+  
+  <form id="frm1" action="" method="POST">
+  
+  <div style="width:90%; font-size:11px;margin-left:10px;">
+  
+  
+  
+  
+  
+  <div style=" box-shadow: 10px 10px 5px #000000; border-radius: 18px; width:100%;height:460px;margin-top:5px; border: 1px solid #008B8B; margin-left:0px;font-size:11px;" class="card">
+  
+  
+  
+            <h3 style="font-size:21px; text-align: center;color:white; text-shadow: 2px 2px 2px #008B8B;margin-top:-10px;">STAMPING REGISTER</h3>
+  
+  
+  
+  
+  
+  
+  <div style="width:85%; height:50px; float:left; margin-left:30px;margin-top:10px;">
+   <p style="font-size:18px; text-align: center;color:white;margin-top:-10px; text-shadow: 2px 2px 2px #008B8B;">Customer Name</p>
+     <select id="cusname" name="cusname" style="text-align: center;width:100%;height:50px;font-size:12px;margin-top:-10px;  border-color:#008B8B;   color:#034f84; height:35px;  margin-left:3px; " "="" value="" type="text"> 
+    <option value="">Please select</option>  <option value="Abc"> Abc </option> 
+      <option value="Ajay"> Ajay </option> 
+      <option value="Ganesan"> Ganesan </option> 
+      <option value="Gireesh"> Gireesh </option> 
+      <option value="jose"> jose </option> 
+      <option value="Juned "> Juned  </option> 
+      <option value="KSB"> KSB </option> 
+      <option value="Nataraj electronics "> Nataraj electronics  </option> 
+      <option value="Nataraj electronics "> Nataraj electronics  </option> 
+      <option value="PERUMAL SUPER MARKET "> PERUMAL SUPER MARKET  </option> 
+      <option value="PVTraders"> PVTraders </option> 
+      <option value="raman"> raman </option> 
+      <option value="SARAVA STORE"> SARAVA STORE </option> 
+      <option value="Sugina"> Sugina </option> 
+      <option value="Tg"> Tg </option> 
+      </select>
+  </div>
+  
+  
+  
+  
+  
+  
+   <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="addd1" name="addd1">
+    <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="addd2" name="addd2">
+    <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="addd3" name="addd3">
+    <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="mob" name="mob">
+  
+   <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="dname" name="dname">
+    <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="tname" name="tname">
+     <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="citytown" name="citytown">
+      <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="custype" name="custype">
+       
+    <input style="text-align: left;margin-left:0px;background:lightgrey;float: left; width:46%;" hidden="" readonly="" id="RRID" name="RRID">
+  
+  
+  
+  
+  
+  <div style="width:85%; height:50px; float:left; margin-left:30px;margin-top:20px;">
+   <p style="font-size:18px; text-align: center;color:white;margin-top:-10px; text-shadow: 2px 2px 2px #008B8B;">Product Name</p>
+     <select id="prd" name="prd" style="text-align: center;height:50px;font-size:18px;margin-top:-10px;  border-color:#008B8B;   width:100%;color:#034f84; height:35px;  margin-left:3px; " "="" value="" type="text"> 
+    <option value="">Please select</option>  <option value="ASTB 20kg"> ASTB 20kg </option> 
+      <option value="BE-TT/15/30KG/40G/2/5G/111"> BE-TT/15/30KG/40G/2/5G/111 </option> 
+      <option value="Essae teraoka ltd"> Essae teraoka ltd </option> 
+      <option value="INDIAN 30Kg/30Kg/100g/5g/III"> INDIAN 30Kg/30Kg/100g/5g/III </option> 
+      <option value="Indian/35kg/50gm/1gm/II"> Indian/35kg/50gm/1gm/II </option> 
+      <option value="Make reegal max20kg min20g e 2g"> Make reegal max20kg min20g e 2g </option> 
+      <option value="MAKE:ESSAE CAP:500Kg MIN:400g III MODEL:DS852 M/CNO 85216191966"> MAKE:ESSAE CAP:500Kg MIN:400g III MODEL:DS852 M/CNO 85216191966 </option> 
+      <option value="MakeRegal cap30kg min100ge 5g"> MakeRegal cap30kg min100ge 5g </option> 
+      <option value="Marc 30kg"> Marc 30kg </option> 
+      <option value="MASTERWEIGH MST 30KG 5GM "> MASTERWEIGH MST 30KG 5GM  </option> 
+      <option value="Maximum 30kg"> Maximum 30kg </option> 
+      <option value="weighing scale"> weighing scale </option> 
+      </select>
+  </div>
+  
+  
+  
+  
+  
+  
+   <div style="width:85%; height:20px; float:left; margin-left:30px;"></div>
+  
+  
+       <div style="width:85%; height:30px; float:left; margin-left:30px;">
+  <p style="font-size:18px; text-align: center;color:white;margin-top:-10px; text-shadow: 2px 2px 2px #008B8B;">Sold Date</p>
+    <input style="text-align: center;margin-left:2px;height:30px; width:100%;color:#034f84;margin-top:-10px;" id="solddate" type="date" name="solddate">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div style="width:85%; height:50px; float:left; margin-left:30px;margin-top:30px;">
+   <p style="font-size:18px; text-align: center;color:white;margin-top:-10px; text-shadow: 2px 2px 2px #008B8B;">Next Stamp.Quarter</p>
+     <select id="nextqrt" name="nextqrt" style="text-align: center;height:50px;font-size:18px;margin-top:-10px;  border-color:#008B8B;   width:100%;color:#034f84; height:35px;  margin-left:3px; " "="" value="" type="text"> 
+    <option value="">Please select</option>  <option value="2023-A"> 2023-A </option> 
+      <option value="2023-B"> 2023-B </option> 
+      <option value="2023-C"> 2023-C </option> 
+      <option value="2023-D"> 2023-D </option> 
+      <option value="2024-A"> 2024-A </option> 
+      <option value="2024-B"> 2024-B </option> 
+      <option value="2024-C"> 2024-C </option> 
+      <option value="2024-D"> 2024-D </option> 
+      <option value="2025-A"> 2025-A </option> 
+      <option value="2025-B"> 2025-B </option> 
+      <option value="2025-C"> 2025-C </option> 
+      <option value="2025-D"> 2025-D </option> 
+      <option value="2026-A"> 2026-A </option> 
+      <option value="2026-B"> 2026-B </option> 
+      <option value="2026-C"> 2026-C </option> 
+      <option value="2026-D"> 2026-D </option> 
+      </select>
+  </div>
+  
+  
+  
+  
+  
+   <div style="width:450px; height:10px; float:left; margin-left:10px;"></div>
+  
+  
+  
+       <div style="width:85%; height:30px; float:left; margin-left:30px;">
+  <p style="font-size:18px; text-align: center;color:white;margin-top:-5px; text-shadow: 2px 2px 2px #008B8B;">Stamped Date</p>
+    <input style="text-align: center;margin-left:2px;height:30px; width:100%;color:#034f84;margin-top:-10px;" id="stmpdate" type="date" name="stmpdate">
+  </div>
+  
+  
+  
+       <div style="width:85%; height:30px; float:left; margin-left:30px;margin-top:30px;">
+  <p style="font-size:18px; text-align: center;color:white;margin-top:-5px; text-shadow: 2px 2px 2px #008B8B;">Machine ID/SL No.</p>
+    <input style="text-align: center;margin-left:2px;height:30px; width:100%;color:#034f84;margin-top:-10px;" id="stmpdate" type="text" name="idsl">
+  </div>
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+         
+  
+          <br>
+  
+  
+  
+               <input style="width:94%;height:60px;  box-shadow: 10px 10px 10px #000000;   background: linear-gradient(#003333, #008B8B); border: 1px solid #008B8B; border-radius: 18px;margin-left:2%;font-size:18px;color:yellow;" class="button" name="submit" id="submit" tabindex="5" value="Submit" type="submit">
+  
+  
+  
+  
+  
+          <br>   <br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </form>
+  
+  
+  
+  
+  
+  <div style="width:100%; height:80px; float:left;background:#008B8B; margin-top:0px; margin-left:0px;">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   </div><table style="    width:95%;
+      margin-left: 0;
+      margin-top: 89px;
+      font-size: 25px;" class="formatHTML5">
+  <thead>
+  <tr>
+  <th>SL</th>
+  <th> CUSTOMER</th>
+  <th>NextDue</th>
+  
+  <th>Delete</th>
+  </tr>
+  
+   </thead><tbody><tr><td>6</td><td>Prathamik Krishi Pattin Sangh </td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=6"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>13</td><td>ANAND BAKERY </td> 
+  
+  <td>2026-D</td><td>
+  <a href="delcusSTMP.php?ID=13"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>14</td><td>ANAND BAKERY </td> 
+  
+  <td>2024</td><td>
+  <a href="delcusSTMP.php?ID=14"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>15</td><td>ABDULAA KASIMSAB SHAIKH</td> 
+  
+  <td>2026-D</td><td>
+  <a href="delcusSTMP.php?ID=15"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>16</td><td>Zahri</td> 
+  
+  <td>2026-C</td><td>
+  <a href="delcusSTMP.php?ID=16"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>17</td><td>Zahri</td> 
+  
+  <td>2026-C</td><td>
+  <a href="delcusSTMP.php?ID=17"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>18</td><td>AMATYA JEWELLRY </td> 
+  
+  <td>2026-A</td><td>
+  <a href="delcusSTMP.php?ID=18"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>19</td><td>Zorba</td> 
+  
+  <td>2026-C</td><td>
+  <a href="delcusSTMP.php?ID=19"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>20</td><td></td> 
+  
+  <td>2026-D</td><td>
+  <a href="delcusSTMP.php?ID=20"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>21</td><td>Pioneer st</td> 
+  
+  <td>2026-C</td><td>
+  <a href="delcusSTMP.php?ID=21"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>22</td><td>Roots</td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=22"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>23</td><td>Roots</td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=23"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>24</td><td>SATHYAN EYE CARE HOSPITAL &amp; COIMBATORE GLAUCOMA FOUNDATION</td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=24"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>25</td><td>SATHYAN EYE CARE HOSPITAL &amp; COIMBATORE GLAUCOMA FOUNDATION</td> 
+  
+  <td>2026-C</td><td>
+  <a href="delcusSTMP.php?ID=25"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>26</td><td>DTDCEXPRESS LIMITED</td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=26"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>27</td><td>Abcd</td> 
+  
+  <td>2025-A</td><td>
+  <a href="delcusSTMP.php?ID=27"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>28</td><td>Abcd1</td> 
+  
+  <td>2023-B</td><td>
+  <a href="delcusSTMP.php?ID=28"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>29</td><td>Gireesh</td> 
+  
+  <td>2025-A</td><td>
+  <a href="delcusSTMP.php?ID=29"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>30</td><td>Sugina</td> 
+  
+  <td>2026-C</td><td>
+  <a href="delcusSTMP.php?ID=30"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>31</td><td></td> 
+  
+  <td>1-</td><td>
+  <a href="delcusSTMP.php?ID=31"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>32</td><td>Nataraj electronics </td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=32"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>33</td><td>Nataraj electronics </td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=33"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>34</td><td>Nataraj electronics </td> 
+  
+  <td>2026-C</td><td>
+  <a href="delcusSTMP.php?ID=34"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>35</td><td>SARAVA STORE</td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=35"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>36</td><td></td> 
+  
+  <td>2023-A</td><td>
+  <a href="delcusSTMP.php?ID=36"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>37</td><td>KSB</td> 
+  
+  <td>2023-A</td><td>
+  <a href="delcusSTMP.php?ID=37"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>38</td><td>Nataraj electronics </td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=38"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>39</td><td></td> 
+  
+  <td>2024-C</td><td>
+  <a href="delcusSTMP.php?ID=39"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>40</td><td></td> 
+  
+  <td>2023-C</td><td>
+  <a href="delcusSTMP.php?ID=40"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>41</td><td>raman</td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=41"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>42</td><td></td> 
+  
+  <td>2024-C</td><td>
+  <a href="delcusSTMP.php?ID=42"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>43</td><td>raman</td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=43"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>44</td><td>Gireesh</td> 
+  
+  <td>2026-D</td><td>
+  <a href="delcusSTMP.php?ID=44"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>45</td><td>jose</td> 
+  
+  <td>1-</td><td>
+  <a href="delcusSTMP.php?ID=45"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>46</td><td></td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=46"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>47</td><td>jose</td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=47"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>48</td><td>Ajay</td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=48"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>49</td><td>Abc</td> 
+  
+  <td>2024-A</td><td>
+  <a href="delcusSTMP.php?ID=49"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>50</td><td>Ganesan</td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=50"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>51</td><td></td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=51"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>52</td><td></td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=52"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>53</td><td></td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=53"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>54</td><td></td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=54"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>55</td><td>Ganesan</td> 
+  
+  <td>2024-C</td><td>
+  <a href="delcusSTMP.php?ID=55"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>56</td><td>Ganesan</td> 
+  
+  <td>2025-B</td><td>
+  <a href="delcusSTMP.php?ID=56"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>57</td><td>Tg</td> 
+  
+  <td>2024-C</td><td>
+  <a href="delcusSTMP.php?ID=57"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>58</td><td>PVTraders</td> 
+  
+  <td>2025-C</td><td>
+  <a href="delcusSTMP.php?ID=58"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr><tr><td>59</td><td></td> 
+  
+  <td></td><td>
+  <a href="delcusSTMP.php?ID=59"><i class="glyphicon glyphicon-trash">delete</i></a>
+  </td>
+  </tr></tbody>
+  
+   
+  
+  </table>
+  
+    <div style="width:100%; height:80px; float:left;background:#008B8B; margin-top:0px; margin-left:0px;">
+  
+        <a style="width:90%;height:50px;text-align:center;  box-shadow: 10px 10px 10px #000000;   background: linear-gradient(#003333, #008B8B); border: 1px solid #008B8B; border-radius: 18px;margin-left:4%;margin-top:5px;font-size:18px;color:yellow;" href="admin.php" class="button">GoBack</a>
+  
+  
+  
+  
+  
+  
+  
+   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  </body></html>
